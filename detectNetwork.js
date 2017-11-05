@@ -24,8 +24,8 @@ var detectNetwork = function(cardNumber) {
   var firstTwo = cardNumber.slice(0,2);
   var num = parse(firstTwo);
 
-  (num === 38 && cardNumber.length === 14 || num === 39 && cardNumber.length === 14) return "Diner's Club";
-  (num === 34 && cardNumber.length === 15 || num === 37 && cardNumber.length === 15) return "American Express"
+  if (num === 38 && cardNumber.length === 14 || num === 39 && cardNumber.length === 14) return "Diner's Club";
+  if (num === 34 && cardNumber.length === 15 || num === 37 && cardNumber.length === 15) return "American Express"
   // Once you've read this, go ahead and try to implement this function, then return to the console.
 };
 
